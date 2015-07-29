@@ -1,0 +1,62 @@
+
+
+.numberbutton {
+ font-size: 14px;
+ width: 47px;
+ padding: 12px;
+ margin-top: 5px;
+ background-color: rgba(243, 243, 243, 0.96);
+}
+.numberbuttonc {
+ font-size: 14px;
+ width: 47px;
+ padding: 12px;
+ margin-top: 5px;
+ background-color: #AB0000;
+ color: #fff;
+}
+.numberbuttono {
+ font-size: 14px;
+ width: 47px;
+ padding: 12px;
+ margin-top: 5px;
+ background-color: #2393A7;
+ color: #fff;
+}
+.numberbuttonsci {
+ font-size: .5em;
+ width: 47px;
+ padding: 12px;
+ margin-top: 8px;
+ background-color: #969FA0;
+ color: #fff;
+}
+
+.clearbutton {
+    background-color: rgb(234, 158, 21);
+    color: white;
+    width: 49px;
+    padding-top: 62px;
+    margin-top: -50px;
+    padding-bottom: 10px;
+}
+
+.output {
+  background: black;
+  color: lime;
+  font-family: "Courier New", Courier;
+  padding: 18px 24px;
+  width: 199px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.calcbody {
+    background: rgba(56, 55, 52, 0.52);
+    height: 385px;
+    box-shadow: 6px 7px 3px #1F1E1E;
+    border-radius: 12px;
+    float: right;
+    margin-right: 50%;
+    padding: 26px 17px;
+}

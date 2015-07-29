@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scientific Calculator using Native Javascript</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+<div class="calcbody">
+	<form>
+		<input class="output" name="display" value="0" size="25">
+
+		<br>
+		<input class="numberbuttonsci" type="button" value="    (    " onClick="addChar(this.form.display, '(')"> 
+		<input class="numberbuttonsci" type="button" value="cos   " onClick="if (checkNum(this.form.display.value)) { 
+		cos(this.form) }">
+		<input class="numberbuttonsci" type="button" value="sin   " onClick="if (checkNum(this.form.display.value)) {
+		sin(this.form) }">
+		<input class="numberbuttonsci" type="button" value="tan   " onClick="if (checkNum(this.form.display.value)) { 
+		tan(this.form) }">
+		<input class="numberbuttonsci" type="button" value="    )    " onClick="addChar(this.form.display, ')')"> 
+		<br>
+		<input class="numberbuttonsci" type="button" value="exp  " onClick="if (checkNum(this.form.display.value)) { 
+		exp(this.form) }">
+		<input class="numberbuttonsci" type="button" value="ln    " onClick="if (checkNum(this.form.display.value)) { 
+		ln(this.form) }">
+		<input class="numberbuttonsci" type="button" value="sqrt  " onClick="if (checkNum(this.form.display.value)) {
+		sqrt(this.form) }">	
+		<input class="numberbuttonsci" type="button" value="sq    " onClick="if (checkNum(this.form.display.value)) { 
+		square(this.form) }">
+		<input class="numberbuttonsci" type="button" value="log   " onClick="if (checkNum(this.form.display.value)) { 
+		log(this.form) }">
+		<br>
+		<input class="numberbuttonsci" type="button" value="pi   " onClick="if (checkNum(this.form.display.value)) { 
+		pi(this.form) }">
+		<input class="numberbuttonsci" type="button" value="LN2" onClick="if (checkNum(this.form.display.value)) { 
+		LN2(this.form) }">
+		<input class="numberbuttonsci" type="button" value="LN10" onClick="if (checkNum(this.form.display.value)) { 
+		LN10(this.form) }">
+		<input class="numberbuttonsci" type="button" value="LOG2E" onClick="if (checkNum(this.form.display.value)) { 
+		LOG2E(this.form) }">
+		<input class="numberbuttonsci" type="button" value="LOG10E " onClick="if (checkNum(this.form.display.value)) { 
+		LOG10E(this.form) }">
+		<br>
+
+		<input class="numberbutton" type="button" value="    7    " onClick="addChar(this.form.display, '7')">
+		<input class="numberbutton" type="button" value="    8    " onClick="addChar(this.form.display, '8')">
+		<input class="numberbutton" type="button" value="    9    " onClick="addChar(this.form.display, '9')">
+		<input class="numberbuttono" type="button" value="    /    " onClick="addChar(this.form.display, '/')">
+		<input class="numberbuttonc" type="button" value="C" onClick="this.form.display.value = 0 ">
+		<br>
+
+		<input class="numberbutton" type="button" value="    4    " onClick="addChar(this.form.display, '4')">
+		<input class="numberbutton" type="button" value="    5    " onClick="addChar(this.form.display, '5')">
+		<input class="numberbutton" type="button" value="    6    " onClick="addChar(this.form.display, '6')">
+		<input class="numberbuttono" type="button" value="    *    " onClick="addChar(this.form.display, '*')">	
+		<input class="numberbuttonc" type="button" value="DEL" onClick="deleteChar(this.form.display)">
+
+		<br>
+
+		<input class="numberbutton" type="button" value="    1    " onClick="addChar(this.form.display, '1')">
+		<input class="numberbutton" type="button" value="    2    " onClick="addChar(this.form.display, '2')">
+		<input class="numberbutton" type="button" value="    3    " onClick="addChar(this.form.display, '3')">
+		<input class="numberbuttono" type="button" value="    -    " onClick="addChar(this.form.display, '-')">
+		<br>
+
+		<input class="numberbutton" type="button" value="    0    " onClick="addChar(this.form.display, '0')"> 
+		<input class="numberbutton" type="button" value="    .    " onClick="addChar(this.form.display, '.')"> 
+		<input class="numberbutton" type="button" value="   +/-   " onClick="changeSign(this.form.display)">
+		<input class="numberbuttono" type="button" value="    +    " onClick="addChar(this.form.display, '+')">
+		<input class="clearbutton" type="button" value="Enter" name="enter" onClick="if (checkNum(this.form.display.value)) { 
+		compute(this.form) }">
+	</form>
+</div>
+<!--Javascript Scientific Calculator Code -->
+
+<script language="javascript">
+
+	function addChar(input, character) {
+		if(input.value == null || input.value == "0")
+		input.value = character
+		else
+		input.value += character
+	}
+
+	function cos(form) {
+		form.display.value = Math.cos(form.display.value);
+	}
+	
+	function sin(form) {
+		form.display.value = Math.sin(form.display.value);
+	}
+		
+	function tan(form) {
+		form.display.value = Math.tan(form.display.value);
+	}
+	
+	function sqrt(form) {
+		form.display.value = Math.sqrt(form.display.value);
+	}
+	
+	function ln(form) {
+		form.display.value = Math.log(form.display.value);
+	}
+	
+	function exp(form) {
+		form.display.value = Math.exp(form.display.value);
+	}
+	
+	function sqrt(form) {
+		form.display.value = Math.sqrt(form.display.value);
+	}
+
+	function log(form) {
+		form.display.value = Math.log(form.display.value);
+	}
+
+	function pi(form) {
+		form.display.value = Math.PI*(form.display.value);
+	}
+
+	function LN2(form) {
+		form.display.value = Math.LN2*(form.display.value);
+	}
+	function LN10(form) {
+		form.display.value = Math.LN10*(form.display.value);
+	}
+	function LOG2E(form) {
+		form.display.value = Math.LOG2E*(form.display.value);
+	}
+	function LOG10E(form) {
+		form.display.value = Math.LOG10E*(form.display.value);
+	}
+
+	function deleteChar(input) {
+		input.value = input.value.substring(0, input.value.length - 1)
+	}
+
+	function changeSign(input) {
+		substring
+		if(input.value.substring(0, 1) == "-")
+		input.value = input.value.substring(1, input.value.length)
+		else
+		input.value = "-" + input.value
+	}
+
+	function compute(form)  {
+		form.display.value = eval(form.display.value)
+	}
+
+	function square(form)  {
+		form.display.value = eval(form.display.value) *
+		eval(form.display.value)
+	}
+
+	function checkNum(str) {
+		for (var i = 0; i < str.length; i++) {
+		var ch = str.substring(i, i+1)
+		if (ch < "0" || ch > "9") {
+		if (ch != "/" && ch != "*" && ch != "+" && ch !=
+		"-" && ch != "."
+		&& ch != "(" && ch!= ")") {
+		alert("invalid entry!")
+		return false
+		         }
+		      }
+		   }
+		return true
+	}
+
+ // 	}
+</script>
+</body>
+</html>
